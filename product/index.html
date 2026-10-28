@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0c0c0c">
+<meta name="format-detection" content="telephone=no">
+<title>Полина Дакоро — продакт-менеджер</title>
+<meta name="description" content="Исследования, CJM, анализ конкурентов и продуктовые гипотезы">
+<meta property="og:title" content="Полина Дакоро — продакт-менеджер">
+<meta property="og:description" content="Исследования, CJM, анализ конкурентов и продуктовые гипотезы">
+<meta property="og:image" content="images/photo.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23e3272c'/%3E%3Ctext x='32' y='41' font-size='26' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3EПД%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--accent:#e3272c;--accent-hi:#ff3b40;--bg:#0c0c0c;--panel:#161616;--paper:#1e1e1e;--ink:#f1f0ee;--muted:#9a9a9a;--line:rgba(241,240,238,.1);--soft:rgba(227,39,44,.14);}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 "Manrope",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav.top{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;gap:22px;align-items:center;height:56px;overflow-x:auto;white-space:nowrap}
+nav.top b{font:600 15px "Unbounded",sans-serif;margin-right:auto}
+nav.top a{text-decoration:none;font-size:14px;color:var(--muted)}
+nav.top a:hover{color:var(--accent)}
+header.hero{padding:64px 0 40px;display:grid;grid-template-columns:200px 1fr;gap:44px;align-items:center}
+.photo{width:200px;height:200px;border-radius:50%;overflow:hidden;background:var(--soft);display:grid;place-items:center;font:600 54px "Unbounded",sans-serif;color:var(--accent-hi);border:3px solid var(--accent)}
+.photo{position:relative}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.role{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-hi);margin-bottom:12px}
+h1{font:600 clamp(38px,6vw,64px)/1.02 "Unbounded",sans-serif;letter-spacing:-.02em}
+.tagline{font-size:21px;margin-top:14px;max-width:34ch}
+.meta{color:var(--muted);margin-top:10px;font-size:15px}
+.contacts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;border:1.5px solid var(--ink);text-decoration:none;font-weight:600;font-size:14px;transition:.15s}
+.btn:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{filter:brightness(.92)}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font:600 26px/1.2 "Unbounded",sans-serif;margin-bottom:22px}
+h2 small{display:block;font:400 14px "Manrope",sans-serif;color:var(--muted);margin-top:6px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about p+p{margin-top:14px}
+.punch{align-self:start;background:var(--accent);color:#fff;border-radius:22px;padding:26px;font:500 21px/1.35 "Unbounded",sans-serif}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
+.stat b{display:block;font:600 30px/1.1 "Unbounded",sans-serif;color:var(--accent-hi);margin-bottom:8px}
+.stat span{font-size:14px;color:var(--muted);line-height:1.45;display:block}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:8px 14px;border-radius:999px;background:var(--paper);border:1px solid var(--line);font-size:14px;font-weight:600}
+ul.list{list-style:none}
+.entry{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:20px 0;border-bottom:1px dashed var(--line)}
+.entry:last-child{border-bottom:0}
+.date{color:var(--muted);font-size:14px;padding-top:3px}
+.entry h3{font-size:18px;font-weight:700;line-height:1.35;margin-bottom:6px}
+.entry p{color:var(--muted)}
+a.ext{color:var(--accent-hi);text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}
+a.ext::after{content:"↗";font-size:.8em;margin-left:2px;text-decoration:none;display:inline-block}
+a.ext:hover{text-decoration-thickness:3px}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.case{background:var(--soft);border-radius:20px;padding:24px}
+.case h3{font:600 18px/1.3 "Unbounded",sans-serif;margin-bottom:10px}
+.extra{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.extra div{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px}
+.extra h3{font-size:16px;margin-bottom:6px}
+.extra p{color:var(--muted);font-size:15px}
+.works{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.work{display:flex;flex-direction:column;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;text-decoration:none;transition:.15s}
+.work:hover{border-color:var(--accent);transform:translateY(-2px)}
+.work small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.work b{font-size:16px;line-height:1.35;flex:1}
+.work span{color:var(--accent-hi);font-weight:700;font-size:14px}
+.gallery-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:36px 0 14px}
+.gallery-head h3{font:600 18px "Unbounded",sans-serif}
+.gallery-head p{color:var(--muted);font-size:14px}
+.arrows{display:flex;gap:8px}
+.arrows button{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--ink);background:none;color:var(--ink);font-size:18px;cursor:pointer}
+.arrows button:hover{background:var(--ink);color:var(--bg)}
+.gallery{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;cursor:grab;scrollbar-width:thin}
+.gallery.drag{cursor:grabbing;scroll-snap-type:none}
+.slot{flex:0 0 min(420px,82vw);scroll-snap-align:start}
+.slot .frame{aspect-ratio:4/3;border-radius:18px;overflow:hidden;border:2px dashed color-mix(in srgb,var(--accent) 45%,var(--line));background:var(--soft);display:grid;place-items:center;text-align:center;padding:20px}
+.slot .frame img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+.slot.filled .frame{border:0;padding:0;cursor:zoom-in}
+.ph b{display:block;color:var(--accent-hi);font:600 14px "Unbounded",sans-serif;margin-bottom:6px}
+.ph code{font-size:12px;color:var(--muted)}
+.slot figcaption{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.4}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.86);display:none;place-items:center;z-index:20;padding:24px;cursor:zoom-out}
+.lightbox.open{display:grid}
+.lightbox img{max-width:100%;max-height:90vh;border-radius:12px}
+footer{padding:48px 0 64px;border-top:1px solid var(--line)}
+.sub{font:600 18px "Unbounded",sans-serif;margin:36px 0 14px}
+.drives{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.drives.one{grid-template-columns:minmax(0,640px)}
+.drive{display:flex;flex-direction:column;gap:12px;background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:18px;padding:24px}
+.drive small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.drive h3{font:600 19px/1.3 "Unbounded",sans-serif}
+.drive p{color:var(--muted);font-size:15px}
+.drive ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;flex:1;align-content:flex-start}
+.drive li{font-size:13px;font-weight:600;padding:5px 10px;border-radius:999px;background:var(--paper);border:1px solid var(--line)}
+.drive .btn{align-self:flex-start;margin-top:4px}
+.wheel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px}
+.wheel-head{grid-column:1/-1}
+.wheel-head small{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-hi)}
+.wheel-head h3{font:600 22px/1.3 "Unbounded",sans-serif;margin-top:8px}
+.wheel h4{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.wheel .btn{grid-column:1/-1;justify-self:start}
+footer h2{margin-bottom:16px}
+@media (max-width:760px){
+ .drives,.wheel{grid-template-columns:1fr}
+ header.hero{grid-template-columns:1fr;gap:24px;padding-top:36px}
+ .photo{width:130px;height:130px;font-size:36px}
+ .about,.cases{grid-template-columns:1fr}
+ .stats{grid-template-columns:1fr 1fr}
+ .entry{grid-template-columns:1fr;gap:4px}
+ nav.top a.hide-m{display:none}
+}
+/* горизонтальная лента публикаций */
+.sub-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:36px 0 14px}
+.sub-row .sub{margin:0}
+.works.hscroll{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:0;padding-bottom:12px;
+  scrollbar-width:thin;scrollbar-color:var(--accent) transparent;cursor:grab;-webkit-overflow-scrolling:touch}
+.works.hscroll.drag{cursor:grabbing;scroll-snap-type:none}
+.works.hscroll .work{flex:0 0 250px;scroll-snap-align:start;user-select:none}
+.works.hscroll::-webkit-scrollbar{height:6px}
+.works.hscroll::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+.arrows button:disabled{opacity:.3;cursor:default}
+/* ---------- телефоны ---------- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+a,button{-webkit-tap-highlight-color:rgba(227,39,44,.25)}
+section,footer,header{scroll-margin-top:64px}
+.btn,.work,.drive .btn{touch-action:manipulation}
+@media (max-width:600px){
+ body{font-size:16px;line-height:1.55}
+ .wrap{padding:0 16px}
+ nav.top .wrap{height:52px;gap:4px;justify-content:space-between;scrollbar-width:none}
+ nav.top .wrap::-webkit-scrollbar{display:none}
+ nav.top b{display:none}
+ nav.top a{padding:14px 6px;font-size:14px;color:var(--ink)}
+ header.hero{padding:28px 0 28px;gap:18px}
+ .photo{width:104px;height:104px;font-size:30px;border-width:2px}
+ .role{font-size:12px;margin-bottom:8px}
+ h1{font-size:36px}
+ .tagline{font-size:18px;margin-top:10px}
+ .meta{font-size:14px}
+ .contacts{gap:8px;margin-top:18px}
+ .contacts .btn{flex:1 1 auto;justify-content:center;min-height:44px;padding:10px 14px}
+ section{padding:32px 0}
+ h2{font-size:22px;margin-bottom:16px}
+ .about{gap:20px}
+ .punch{font-size:18px;padding:20px;border-radius:18px}
+ .stats{gap:10px}
+ .stat{padding:16px}
+ .stat b{font-size:24px;white-space:nowrap}
+ .stat span{font-size:13px}
+ .chip{font-size:13px;padding:7px 12px}
+ .entry{padding:16px 0}
+ .entry h3{font-size:17px}
+ .case,.drive,.wheel{padding:20px}
+ .wheel-head h3{font-size:19px}
+ .drive h3{font-size:17px}
+ .drive .btn,.wheel .btn{width:100%;justify-content:center;min-height:46px}
+ .sub{margin:28px 0 12px}
+ .works{grid-template-columns:1fr;gap:10px}
+ .works.hscroll .work{flex:0 0 78%}
+ .sub-row .arrows{display:none}
+ .sub-row{margin:28px 0 12px}
+ .work{padding:16px}
+ footer{padding:36px 0 48px}
+}
+@media (max-width:340px){
+ h1{font-size:32px}
+ .stats{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{nav.top,.arrows,.lightbox{display:none}body{background:#fff}.gallery{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap">
+  <b>Полина Дакоро</b>
+  <a href="#about">О себе</a>
+  
+  <a href="#edu" class="hide-m">Обучение</a>
+  <a href="#exp">Опыт</a>
+  <a href="#portfolio">Портфолио</a>
+  <a href="#contacts" class="hide-m">Контакты</a>
+</div></nav>
+<div class="wrap">
+<header class="hero">
+  <div class="photo">ПД<img src="images/photo.jpg" alt="Полина Дакоро" onerror="this.remove()"></div>
+  <div>
+    <span class="role">Product Manager · продакт-менеджер</span>
+    <h1>Полина Дакоро</h1>
+    <p class="tagline">Исследования, CJM, анализ конкурентов и продуктовые гипотезы</p>
+    <p class="meta">НИУ ВШЭ, «Медиакоммуникации», 2026 · английский C1</p>
+    <div class="contacts">
+      <a class="btn primary" href="https://t.me/herumee" target="_blank" rel="noopener">Telegram</a>
+      <a class="btn" href="mailto:dakoropoli@gmail.com">dakoropoli@gmail.com</a>
+      <a class="btn" href="tel:+79298212883">+7 929 821-28-83</a>
+      <a class="btn" href="https://wa.me/qr/N2STSA5LXNAJE1" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <h2>О себе</h2>
+  <div class="about">
+    <div><p>В ВШЭ параллельно с медиакоммуникациями прошла двухлетний майнор по созданию стартапов и курсы по управлению продуктом. Умею проводить кастдевы, формулировать и приоритизировать гипотезы, считать unit-экономику и писать ТЗ.</p><p>Моя сильная сторона — находить слабые места продукта и предлагать решения. Строю CJM и по шагам смотрю, где пользователь спотыкается, сомневается или уходит. Анализирую конкурентов: что у них получается хорошо, чего у них нет и чем продукт может выделиться. По итогам формулирую гипотезы для проверки.</p><p>Два года была ментором стартап-команд, работала в edtech-стартапе вместе с основателем, запускала свои проекты с нуля.</p></div>
+    <div class="punch">Люблю находить, что в продукте можно улучшить, и придумывать, как это сделать.</div>
+  </div>
+</section>
+
+<section>
+  <h2>В цифрах</h2>
+  <div class="stats">
+    <div class="stat"><b>2 года</b><span>менторила стартап-команды в Школе бизнес-трекеров ВШЭ</span></div>
+    <div class="stat"><b>2 команды</b><span>довела от регионального этапа до финала кейс-чемпионата ВШЭ</span></div>
+    <div class="stat"><b>4</b><span>крупные B2B-сделки стартапа с моим участием: Туту.ру, HH.ru, «Газпром нефть», Ancor</span></div>
+    <div class="stat"><b>высшая</b><span>оценка за концепцию образовательного продукта</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Ключевые навыки</h2>
+  <div class="chips"><span class="chip">Customer development</span><span class="chip">Проблемные и глубинные интервью</span><span class="chip">JTBD</span><span class="chip">Lean Canvas · BMC · VPC</span><span class="chip">CJM</span><span class="chip">Гипотезы и приоритизация</span><span class="chip">Продуктовые метрики</span><span class="chip">Unit-экономика</span><span class="chip">Техническое задание</span><span class="chip">Скрам</span><span class="chip">Фасилитация</span><span class="chip">Питчинг</span><span class="chip">Miro · Notion · Битрикс · Google-таблицы</span></div>
+</section>
+
+<section id="edu">
+  <h2>Продуктовая подготовка<small>Названия кликабельны</small></h2>
+  <ul class="list">
+      <li class="entry">
+        <div class="date">2022 – 2026</div>
+        <div><h3>НИУ ВШЭ, «Медиакоммуникации»</h3><p>Вместе с основной программой изучала продуктовые и бизнес-дисциплины.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">2 года</div>
+        <div><h3>Майнор <a class="ext" href="https://www.hse.ru/edu/courses/835236819" target="_blank" rel="noopener">«Школа бизнес-трекеров» ВШЭ</a></h3><p>Путь от идеи до стартапа: customer development и проблемные интервью, дизайн-мышление, сегменты и портреты потребителей, Value Proposition Canvas, Business Model Canvas, CJM, анализ конкурентов, поиск product market fit и первых клиентов, питчинг инвестиционной презентации.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Курс</div>
+        <div><h3>Курс <a class="ext" href="https://www.hse.ru/ba/media/courses/1048926226.html" target="_blank" rel="noopener">«Управление продуктом»</a></h3><p>Продуктовые гипотезы и их приоритизация по метрикам, анализ конкурентов, декомпозиция сложных систем, постановка задач разработке, аналитикам и дизайнерам, ТЗ, подготовка к собеседованию на позицию продакт-менеджера.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Семинар</div>
+        <div><h3>Проектный семинар <a class="ext" href="https://www.hse.ru/edu/courses/470891636" target="_blank" rel="noopener">«Продюсирование образовательных онлайн-продуктов»</a></h3><p>С командой разработала концепцию продукта для детей с проблемами концентрации внимания: Lean Canvas, JTBD, исследования, прототип и тест на аудитории, точка безубыточности и монетизация, публичный питч. Высшая оценка; экзаменаторы предложили забрать проект в работу.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Апр 2025</div>
+        <div><h3>Школа фасилитаторов и продактов <a class="ext" href="https://psbschool.org" target="_blank" rel="noopener">ПСБ</a></h3><p>Работа продакта в IT изнутри, фасилитация и управление командой.</p></div>
+      </li>
+  </ul>
+</section>
+
+<section id="exp">
+  <h2>Опыт<small>Названия кликабельны</small></h2>
+  <ul class="list">
+      <li class="entry">
+        <div class="date">2023 – 2025</div>
+        <div><h3>Ментор <a class="ext" href="https://www.hse.ru/edu/courses/835236819" target="_blank" rel="noopener">«Школа бизнес-трекеров»</a></h3><p>Два года вела стартап-команды: помогала создавать, вести и питчить стартапы, разбирала с ними unit-экономику, кастдевы и глубинные интервью, работу в Miro и по скраму, азы конфликтологии. Сама была наставником по этому предмету и управляла командами.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Сен – дек 2025</div>
+        <div><h3>Ментор кейс-чемпионата школьников ВШЭ</h3><p>Довела две команды от регионального этапа до финала. Проект одной из них получил предложение от инвесторов и развивается дальше.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Дек 2024 – апр 2025</div>
+        <div><h3>Ассистент руководителя в стартапе <a class="ext" href="https://www.openmind-education.ru/become_curator" target="_blank" rel="noopener">Openmind</a></h3><p>Выполняла задачи проджекта, HR, сейлз-менеджера и личные задачи руководителя. Итоги: заключили сделки с такими компаниями, как Туту.ру, HH.ru, «Газпром нефть», Ancor; пополнила базу данных на 120+ контактов ЛПР; успешно собеседовала и онбордила сотрудников в 3 ключевых отдела.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Курс «Медиамаркетинг»</div>
+        <div><h3>Коммуникационная стратегия для мебельного бренда «Архполе»</h3><p>С командой разработала коммуникационную стратегию и презентовала её основателям. Бренд активно использует результаты.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Апр 2024</div>
+        <div><h3>Продюсер, контент-менеджер, автор текстового контента, координатор площадки в ОЦ <a class="ext" href="https://sochisirius.ru/" target="_blank" rel="noopener">«Сириус»</a></h3><p>Создала ряд постов для ВК-группы «Сириуса», а также оптимизировала навигацию тг-канала спортивного парка «Сириус», что привело лидов на тренировки. Провела с командой международный конкурс музыкантов «Созвездие», помогала на площадке артистам, создала короткие ролики для ВК-группы «Сириуса».</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Март 2023 – июнь 2024</div>
+        <div><h3>Соавтор, сооснователь, актёр озвучивания и монтажёр подкаста о субкультурах <a class="ext" href="https://homelessgrunge.mave.digital/" target="_blank" rel="noopener">«Я не бомж, это гранж»</a></h3><p>Создание 20 выпусков подкаста о субкультурах (в том числе и их моде): сценарий, запись, монтаж, ведение тг-канала.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Июнь – авг 2025</div>
+        <div><h3>Influence-менеджер в издательстве <a class="ext" href="https://smartreading.ru/" target="_blank" rel="noopener">Smart Reading</a></h3><p>Привела в порядок, автоматизировала и агрегировала таблицы контактов, нашла 50 новых, сделала успешную рассылку подарочных изданий для крупных блогеров.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Июль 2026</div>
+        <div><h3>Кастинг-директор и второй продюсер для лейбла <a class="ext" href="https://discoklub.com/" target="_blank" rel="noopener">«Диско-клуб»</a></h3><p>Собрала сложный каст в сжатые сроки, привлекла медийную персону, что увеличило охваты клипа в соцсетях — и всё без бюджета. Провела успешные переговоры с сообществом моноколесников (сензитивная, как оказалось, группа). Итог: 45 тысяч просмотров клипа в соцсетях, учитывая, что это ролик на 2+ минуты и аудитория артиста 5к. Лайки и комментарии от Вильчинского, Незрим Вадим, Даниил Брод (группа pompeya).</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Авг – сен 2026</div>
+        <div><h3>Креативный копирайтер в агентстве <a class="ext" href="https://setters.agency/" target="_blank" rel="noopener">Setters</a></h3><p>Работала с крупными клиентами агентства (названия под NDA): B2B-направление одной из крупнейших IT-экосистем страны, федеральный сервис городской мобильности, международная косметическая марка, столичный музей, городской проект Москвы, сеть оптик, FMCG-бренды. Писала рекламные, новостные и информационные тексты. Для крупного клиента в сфере продуктов питания стала автором SMM-концепции и идей креативных спецпроектов внутри неё. Клиент отметил креативность спецпроектов и то, что идея точно попала в задачу с первого-второго раза — так бывает редко. Активно участвовала в штурмах идей.</p></div>
+      </li>
+      <li class="entry">
+        <div class="date">Июнь 2025 – июль 2026</div>
+        <div><h3>Редактор и автор в медиа <a class="ext" href="https://thepike.ru/" target="_blank" rel="noopener">«Щука»</a></h3><p>Писала аналитические статьи, которые делали классные цифры для сайта: темы, связанные с городом и урбан-жизнью, аналитика по социальным явлениям. Рекордная статья принесла 40 тысяч посещений из всех 200 тысяч за год.</p></div>
+      </li>
+  </ul>
+</section>
+
+<section id="portfolio">
+  <h2>Портфолио<small>Работы открываются по клику</small></h2>
+  <h3 class="sub">Папки с работами</h3>
+  <div class="drives one">
+    <div class="drive"><small>Google Диск · продукт</small><h3>Продуктовые работы</h3><p>Продуктовые проекты: исследования, CJM, анализ конкурентов и предложенные решения.</p><a class="btn primary" href="https://drive.google.com/drive/folders/16O72h9V-e7sbarurj7m_iABgBKqZwDcA?usp=sharing" target="_blank" rel="noopener">Открыть папку ↗</a></div>
+  </div>
+
+</section>
+</div>
+
+<footer id="contacts"><div class="wrap">
+  <h2>Давайте создавать</h2>
+  <div class="contacts">
+    <a class="btn primary" href="https://t.me/herumee" target="_blank" rel="noopener">Telegram @herumee</a>
+    <a class="btn" href="mailto:dakoropoli@gmail.com">dakoropoli@gmail.com</a>
+    <a class="btn" href="tel:+79298212883">+7 929 821-28-83</a>
+    <a class="btn" href="https://wa.me/qr/N2STSA5LXNAJE1" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <p class="meta" style="margin-top:24px">© 2026 Полина Дакоро</p>
+</div></footer>
+<script>
+(function(){
+  var p=document.querySelector('.photo img');
+  if(p){p.addEventListener('error',function(){p.remove();});}
+  document.querySelectorAll('.slot').forEach(function(s){
+    var src=s.dataset.src,frame=s.querySelector('.frame');
+    (function tryExt(list){
+      if(!list.length) return;
+      var i=new Image();
+      i.onload=function(){frame.innerHTML='';i.alt=s.querySelector('figcaption').textContent;frame.appendChild(i);s.classList.add('filled');};
+      i.onerror=function(){tryExt(list.slice(1));};
+      i.src=src+list[0];
+    })(['.jpg','.png','.webp','.jpeg']);
+  });
+  var g=document.querySelector('.gallery');
+  if(g){
+    var step=function(d){g.scrollBy({left:d*(g.querySelector('.slot').offsetWidth+16),behavior:'smooth'});};
+    document.querySelector('.prev').onclick=function(){step(-1);};
+    document.querySelector('.next').onclick=function(){step(1);};
+    g.tabIndex=0;
+    g.addEventListener('keydown',function(e){if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+    var down=false,sx=0,sl=0,moved=false;
+    g.addEventListener('mousedown',function(e){down=true;moved=false;sx=e.pageX;sl=g.scrollLeft;g.classList.add('drag');});
+    window.addEventListener('mouseup',function(){down=false;g.classList.remove('drag');});
+    g.addEventListener('mousemove',function(e){if(!down)return;var dx=e.pageX-sx;if(Math.abs(dx)>4)moved=true;g.scrollLeft=sl-dx;});
+    var lb=document.querySelector('.lightbox');
+    g.addEventListener('click',function(e){
+      if(moved)return;
+      var s=e.target.closest('.slot.filled');
+      if(s){lb.innerHTML='';var im=s.querySelector('img').cloneNode();lb.appendChild(im);lb.classList.add('open');}
+    });
+    lb.onclick=function(){lb.classList.remove('open');};
+  }
+})();
+
+(function(){
+  document.querySelectorAll('.works.hscroll').forEach(function(g){
+    var row=g.previousElementSibling, prev=row&&row.querySelector('.hs-prev'), next=row&&row.querySelector('.hs-next');
+    function step(d){var c=g.querySelector('.work');g.scrollBy({left:d*(c.offsetWidth+14),behavior:'smooth'});}
+    function upd(){if(!prev)return;prev.disabled=g.scrollLeft<4;next.disabled=g.scrollLeft+g.clientWidth>=g.scrollWidth-4;}
+    if(prev){prev.onclick=function(){step(-1);};next.onclick=function(){step(1);};}
+    g.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+    var down=false,sx=0,sl=0,moved=false;
+    g.addEventListener('mousedown',function(e){down=true;moved=false;sx=e.pageX;sl=g.scrollLeft;});
+    window.addEventListener('mouseup',function(){down=false;g.classList.remove('drag');});
+    g.addEventListener('mousemove',function(e){if(!down)return;var dx=e.pageX-sx;if(Math.abs(dx)>5){moved=true;g.classList.add('drag');}g.scrollLeft=sl-dx;});
+    g.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);
+    g.querySelectorAll('a').forEach(function(a){a.addEventListener('dragstart',function(e){e.preventDefault();});});
+  });
+})();
+</script>
+</body>
+</html>
